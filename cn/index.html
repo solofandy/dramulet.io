@@ -99,8 +99,8 @@
                         if (url.match(/\/app.js$/)) {
                             body = body.replace(/\"\/dl-sim\//g, '"https://cdn.jsdelivr.net/gh/Mushymato/mushymato.github.io@master/dl-sim/');                            
                             // body = body.replace(/\"text\"/, '"blob"');
-                            
                             body = body.replace(/\"https:\/\/cdn\.jsdelivr\.net\/gh\/Mushymato\/mushymato\.github.\io@master\/dl-sim\/page\/\"/g, '"https://mushymato.github.io/dl-sim/page/"');
+                            //body = body.replace(/\"https:\/\/cdn\.jsdelivr\.net\/gh\/Mushymato\/mushymato\.github.\io@master\/dl-sim\/page\/\"/g, '"/dl-sim/page/"');
                         }
                         resolve(body);
                     });
@@ -116,7 +116,10 @@
                 return new Promise(function(resolve, reject) {
                     fetch_from_jsdelivr(url)
                     .then(function(jsbody) {
-                        eval(jsbody);
+                        // eval(jsbody);
+                        var $dom = document.createElement('script');
+                        $dom.innerText = jsbody;
+                        document.body.appendChild($dom);
                         resolve();
                     })
                     .catch(function() {
