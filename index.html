@@ -1,101 +1,26 @@
-<!DOCTYPE html>
-<html lang=en>
-
-<head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <style type=text/css>
-        .app-loader,
-        .app-loader:before,
-        .app-loader:after {
-            background: #228be6;
-            -webkit-animation: load1 1s infinite ease-in-out;
-            animation: load1 1s infinite ease-in-out;
-            width: 1em;
-            height: 4em;
-        }
-
-        .app-loader {
-            color: #228be6;
-            text-indent: -9999em;
-            margin: 88px auto;
-            position: relative;
-            font-size: 11px;
-            -webkit-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-animation-delay: -0.16s;
-            animation-delay: -0.16s;
-            margin-top: 50vh;
-        }
-
-        .app-loader:before,
-        .app-loader:after {
-            position: absolute;
-            top: 0;
-            content: '';
-        }
-
-        .app-loader:before {
-            left: -1.5em;
-            -webkit-animation-delay: -0.32s;
-            animation-delay: -0.32s;
-        }
-
-        .app-loader:after {
-            left: 1.5em;
-        }
-
-        @-webkit-keyframes load1 {
-
-            0%,
-            80%,
-            100% {
-                box-shadow: 0 0;
-                height: 4em;
-            }
-
-            40% {
-                box-shadow: 0 -2em;
-                height: 5em;
-            }
-        }
-
-        @keyframes load1 {
-
-            0%,
-            80%,
-            100% {
-                box-shadow: 0 0;
-                height: 4em;
-            }
-
-            40% {
-                box-shadow: 0 -2em;
-                height: 5em;
-            }
-        }
-    </style>
-    <link rel=icon href=image/favicon.png>
-    <title>失落的龙约 - 护符</title>
-    <link href=css/app.95b17b37.css rel=preload as=style>
-    <link href=https://cdn.jsdelivr.net/gh/solofandy/dramulet.io@master/css/chunk-vendors.d19ec222.css rel=preload as=style>
-    <link href=js/app.b3ffb3af.js rel=preload as=script>
-    <link href=https://cdn.jsdelivr.net/gh/solofandy/dramulet.io@master/js/chunk-vendors.0294cc15.js rel=preload as=script>
-    <link href=https://cdn.jsdelivr.net/gh/solofandy/dramulet.io@master/css/chunk-vendors.d19ec222.css rel=stylesheet>
-    <link href=css/app.95b17b37.css rel=stylesheet>
-</head>
-
-<body><noscript><strong>We're sorry but dragadb doesn't work properly without JavaScript enabled. Please enable it to
-            continue.</strong></noscript>
-    <div id=app>
-        <div class=app-loader></div>
-    </div>
-    <script>var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
-        document.write(unescape("%3Cspan style='display: none;' id='cnzz_stat_icon_1278603155'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1278603155%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
-    <script src=https://cdn.jsdelivr.net/gh/solofandy/dramulet.io@master/js/chunk-vendors.0294cc15.js></script>
-    <script src=js/app.b3ffb3af.js></script>
-</body>
-
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Dragra Amulets have relocated to <br>
+            <a href="https://solofandy.gitee.io/dragracrest.io/">https://solofandy.gitee.io/dragracrest.io/</a>
+            &nbsp;<span id="countdown"></span>
+        </h2>
+    </body>
+    <script type="text/javascript">
+        (function() {
+            var seconds = 6;
+            setInterval(function() {
+                if (seconds <= 0) {
+                    return ;
+                }
+                seconds--;
+                document.getElementById("countdown").innerText = seconds.toString();
+                if (seconds <= 0) {
+                    location.replace('https://solofandy.gitee.io/dragracrest.io/')
+                }
+            }, 1000);
+            
+        })();
+    </script>
 </html>
